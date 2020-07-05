@@ -1,5 +1,5 @@
 spring:
-  defaultDatasource:
+  default-datasource:
     url: "jdbc:mysql://localhost:3306/hb_share_dev?useSSL=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true"
     username: root
     password: HI8m4mZQc5s=
