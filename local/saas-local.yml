@@ -1,0 +1,14 @@
+spring:
+  defaultDatasource:
+    url: "jdbc:mysql://localhost:3306/hb_share_dev?useSSL=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true"
+    username: root
+    password: HI8m4mZQc5s=
+lts:
+  tasktracker:
+    cluster-name: qf_cluster
+    registry-address: zookeeper://zoo1:2181,zoo2:2181,zoo3:2181
+    node-group: CommonServiceTaskTracker
+    configs:
+      job:
+        fail:
+          store: mapdb
