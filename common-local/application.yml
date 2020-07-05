@@ -33,13 +33,7 @@ spring:
     password:
     timeout: 0
     cluster:
-      nodes:
-         - 192.168.2.39:7000
-         - 192.168.2.39:7001
-         - 192.168.2.39:7002
-         - 192.168.2.39:7003
-         - 192.168.2.39:7004
-         - 192.168.2.39:7005
+      nodes: 192.168.2.39:7000,192.168.2.39:7001,192.168.2.39:7002,192.168.2.39:7003,192.168.2.39:7004,192.168.2.39:7005
     jedis:
       pool:
         maxIdle: 100
@@ -52,18 +46,18 @@ spring:
 
 hystrix:
   command:
-      default:
-        execution:
-          isolation:
-            thread:
-              timeoutInMilliseconds: 60000
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
   threadpool:
     default:
       coreSize: 500
 ribbon:
-   ReadTimeout: 60000
-   ConnectTimeout: 5000
-   OkToRetryOnAllOperations: false
+  ReadTimeout: 60000
+  ConnectTimeout: 5000
+  OkToRetryOnAllOperations: false
 qiniu:
   upload:
     bucket: planh
@@ -76,6 +70,6 @@ qiniu:
 
 ############### service feign url  begin #####################
 feign:
-    url:
-        hbshare: http://hbshare:14001
+  url:
+    hbshare: http://hbshare:14001
 ############### service feign url  end #####################
