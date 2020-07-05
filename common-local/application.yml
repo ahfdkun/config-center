@@ -31,11 +31,6 @@ spring:
     host: 192.168.2.39
     port: 6379
     password:
-    pool:
-      max-active: 8
-      max-wait: 1
-      max-idle: 8
-      min-idle: 0
     timeout: 0
     cluster:
       nodes:
@@ -45,18 +40,11 @@ spring:
          - 192.168.2.39:7003
          - 192.168.2.39:7004
          - 192.168.2.39:7005
-
-      maxIdle: 100
-      minIdle: 10
-      maxTotal: 500
-      maxWaitMills: 3000
-      testOnBorrow: true
-      testOnReturn: true
-      testWhileIdle: true
-      minEvictableIdleTimeMillis: 500
-      softMinEvictableIdleTimeMillis: 1000
-      timeBetweenEvictionRunsMillis: 1000
-      numTestsPerEvictionRun: 100
+    jedis:
+      pool:
+        maxIdle: 100
+        minIdle: 10
+        maxActive: 500
   http:
     multipart:
       maxFileSize: 10Mb
